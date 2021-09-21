@@ -1,0 +1,130 @@
+.icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #333;
+  color: #fff;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.container {
+  background-color: #654ea3;
+  transform-origin: top left;
+  transition: transform 0.5s linear;/*规定以相同速度开始至结束的过渡效果（等于 cubic-bezier(0,0,1,1)）。*/
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+}
+
+.container.show-nav {
+  transform: rotate(-20deg);
+  position: fixed;/*元素的位置相对于浏览器窗口是固定位置。即使窗口是滚动的它也不会移动*/
+}
+
+.circle-container {
+  position: fixed;/*元素的位置相对于浏览器窗口是固定位置。即使窗口是滚动的它也不会移动*/
+  top: -100px;
+  left: -100px;
+}
+
+.circle {
+  background-color: #eaafc8;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: fixed;
+  transition: transform 0.5s linear;
+}
+
+.container.show-nav .circle {
+  transform: rotate(-70deg);
+}
+
+.circle button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: #fff;
+}
+
+
+.circle button#open {
+  left: 60%;
+}
+
+.circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+.circle:hover{
+  background-color:#e6bbcd
+}
+
+.container.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+
+}
+
+nav ul {
+  list-style-type: none;/*列表没点*/
+  padding-left: 30px;
+}
+
+nav ul li {
+  color: #fff;
+  margin: 40px 0;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in;
+}
+
+nav ul li i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+nav ul li + li {
+  margin-left: 15px;
+  transform: translateX(-150%);
+}
+
+nav ul li + li + li {
+  margin-left: 30px;
+  transform: translateX(-200%);
+}
+
+nav ul li + li + li +li{
+  margin-left: 40px;
+  transform: translateX(-250%);
+}
+
+nav span{
+  color: #fafafa;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+nav span:hover {
+  color: #eaafc8;
+  font-weight: bold;
+  cursor: pointer;
+}

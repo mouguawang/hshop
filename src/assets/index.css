@@ -1,0 +1,136 @@
+
+.content img {
+  max-width: 100%;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.zhulie{
+  background-color:#333;
+  border:2px solid;
+  border-radius:25px;
+  border-color: #333;
+}
+
+.zhulie ul{
+  list-style-type: none;
+  display:flex;
+  align-items: center;
+  justify-content:space-around;
+  flex-direction:row;
+}
+
+.logo{
+  position:absolute;
+  right: -8px;
+  top: -30px;
+}
+
+footer li:hover{
+  color:#eaafc8;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item {
+  width: 300px;
+  margin: 1rem;
+
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.item img {
+  width: 100%;
+}
+
+.item-info {
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:0.2rem;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.item-info h3 {
+  margin-top: 0;
+}
+
+.item-info span {
+  background-color: var(--primary-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.item-info span.green {
+  color: lightgreen;
+}
+
+.item-info span.orange {
+  color: orange;
+}
+
+.item-info span.red {
+  color: red;
+}
+
+.overview {
+  color: black;
+  background-color: #fff;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  overflow-y: auto;
+  transition: transform 0.3s ease-in;
+}
+
+.item:hover .overview {
+  transform: translateY(0);
+}
+
+footer ul{
+  list-style-type: none;/*列表没点*/
+}
+
+footer{
+  display: flex;
+  flex-direction:row;
+  justify-content:space-around;
+  align-items: center;
+}
+
+footer ul li{
+  font-size: 6px;
+  color: rgb(158, 157, 157);
+}
+
+footer ul li:nth-of-type(1){
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.zhulie li{
+  transition: all 0.5s;
+}
+
+.zhulie li:hover{
+  color:#eaafc8;
+  cursor: pointer;
+}
